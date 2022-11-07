@@ -31,7 +31,7 @@ export default function Main(props) {
       setRunningGame(false);
       setTenzies(true);
       setBestTime((prevBestTime) => {
-        if (time < prevBestTime) {
+        if (prevBestTime === 0 || time < prevBestTime) {
           localStorage.setItem("bestTime", time);
           return time;
         } else {
@@ -39,7 +39,7 @@ export default function Main(props) {
         }
       });
       setBestRolls((prevBestRolls) => {
-        if (numRolls < prevBestRolls) {
+        if (prevBestRolls === 0 || numRolls < prevBestRolls) {
           localStorage.setItem("bestRolls", numRolls);
           return numRolls;
         } else {
