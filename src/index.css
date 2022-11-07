@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+}

@@ -1,0 +1,267 @@
+/*** Section Style ***/
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+  background-color: #f5f5f5;
+  color: black;
+  border-radius: 10px;
+  margin: 3.2rem auto;
+}
+
+section.dark {
+  background-color: #2b283a;
+}
+
+/*** Navbar Component Style ***/
+nav {
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+nav.dark {
+  background-color: #2b283a;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+}
+
+.toggler p {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.toggler--slider {
+  width: 30px;
+  height: 15px;
+  background-color: #2b283a;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #f5f5f5;
+}
+
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2b283a;
+}
+
+nav.dark .toggler--light {
+  color: #918e9b;
+}
+
+.toggler--dark {
+  color: #d5d4d8;
+}
+
+nav.dark .toggler-dark {
+  color: #ffffff;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
+}
+
+/*** Main Component Style ***/
+main {
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  padding: 0 15px;
+}
+main.dark {
+  background-color: #2b283a;
+  color: white;
+}
+
+.title {
+  font-size: 2.2rem;
+}
+
+.instructions {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+}
+
+.dice-container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+  padding: 10px 30px;
+  margin: 20px;
+  justify-items: center;
+}
+
+.roll-dice {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  background-color: #0eff6e;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.roll-dice:focus {
+  outline: none;
+}
+
+.roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.bottom-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5.5rem 10px 5.5rem;
+}
+
+.font--style {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.tracker {
+  font-size: 1.2rem;
+  border-radius: 9px;
+  padding: 8px;
+  margin: 14px auto;
+  font-weight: 500;
+  border: 2px solid #0eff6e;
+}
+
+/*** Die Component Style ***/
+.die {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 4em;
+}
+
+.dice--held {
+  background-color: #0eff6e;
+}
+
+/*** Responsive Style ***/
+@media (max-width: 850px) {
+  section {
+    width: 600px;
+    margin: 3.1rem auto;
+  }
+  .bottom-group {
+    padding: 0 1rem 10px 1rem;
+  }
+  .font--style {
+    font-size: 0.85rem;
+    padding-left: 4px;
+  }
+  .tracker {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  section {
+    width: 400px;
+    margin: 4.2rem auto;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .instructions {
+    font-size: 0.9rem;
+  }
+  .dice-container {
+    gap: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  .die {
+    font-size: 3.5em;
+  }
+  .roll-dice {
+    font-size: 1.3rem;
+    padding: 8px 30px;
+    margin-bottom: 20px;
+  }
+  .bottom-group {
+    padding: 0 1rem 10px 1rem;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+  }
+  .font--style {
+    font-size: 0.8rem;
+  }
+  .tracker {
+    margin: 5px auto;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  section {
+    width: 290px;
+    margin: 5rem auto;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .instructions {
+    font-size: 0.8rem;
+  }
+  .dice-container {
+    gap: 10px 5px;
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+  .die {
+    font-size: 3.3em;
+  }
+  .roll-dice {
+    font-size: 1.2rem;
+    padding: 6px 25px;
+  }
+  .bottom-group {
+    padding: 0 0 10px;
+    gap: 5px 8px;
+  }
+  .font--style {
+    font-size: 0.7rem;
+  }
+  .tracker {
+    font-size: 0.9rem;
+  }
+}
